@@ -1,6 +1,9 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>お茶大 学祭3Dキャンパスマップ</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
 /* Layout: 上に校内地図(番号タップ)、下に選んだ建物の3Dマップ入口、最後に建物一覧 */
@@ -41,6 +44,7 @@ h1{font-size:clamp(22px,5.6vw,32px);line-height:1.25;margin:0;font-weight:900;te
 .chip em.ng{color:var(--ng)}
 .tag{align-self:flex-start;font-size:13px;font-weight:700;padding:3px 12px;border-radius:999px;border:1.5px solid var(--ng);color:var(--ng)}
 .campus{align-self:stretch;justify-content:center}
+.frame{display:block;width:100%;height:min(72vh,600px);border:0;border-radius:8px;background:var(--soft)}
 .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);padding:8px 4px 2px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-2px;margin-right:5px;border:1.5px solid var(--linked);background:color-mix(in srgb,var(--linked) 25%,transparent)}
 .legend i.n{border-color:var(--accent);background:transparent}
@@ -62,6 +66,9 @@ h3{margin:4px 0 0;font-size:14px;letter-spacing:.06em;color:var(--muted);font-we
 .chip em{margin-left:auto;font-style:normal;font-size:11px;color:var(--linked);white-space:nowrap}
 footer{font-size:12px;color:var(--muted)}
 </style>
+</head>
+<body>
+
 
 <div class="wrap">
   <header>
@@ -91,7 +98,7 @@ footer{font-size:12px;color:var(--muted)}
 </div>
 
 <script>
-const MODE = "entry";
+const MODE = "viewer";
 const VIEWER_URL = "https://zhouaijia8-alt.github.io/3D_campus_map/";
 /* ============ ここを書き換えるだけで内容を編集できます ============ */
 const SITE = {
@@ -218,4 +225,5 @@ route();
 if (MODE === "viewer") addEventListener("hashchange", route);
 </script>
 
-</body></html>
+</body>
+</html>
